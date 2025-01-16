@@ -144,3 +144,12 @@ The best way to use this attack is if username and password form fields are avai
 POSSIBLE USERNAME FIELD FOUND: -----------------------------149943779113474047643807462260     
 
 
+![image](https://github.com/user-attachments/assets/fd742d8c-a74a-4159-8f51-1828860be584)
+![image](https://github.com/user-attachments/assets/535e800b-4859-4ade-9c78-b2227b198b9a)
+![image](https://github.com/user-attachments/assets/20380342-c864-4f05-9692-8eae4876eb55)
+![image](https://github.com/user-attachments/assets/a3315a78-ab15-4ba0-bfac-966e738857af)
+
+
+
+
+
